@@ -1,0 +1,5 @@
+.virtual p,
+.virtual span,
+.virtual a {
+  font-family: "Microsoft YaHei", '黑体', '微软雅黑', YaHei, Hei, Tahoma, Helvetica, arial, sans-serif !important;
+}
