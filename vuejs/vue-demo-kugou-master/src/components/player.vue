@@ -1,6 +1,6 @@
 <template>
   <div class="audio-view" :class="{'audio_panel_hide':toggleHide}">
-    <audio :src="audio.songUrl" autoplay id="audioPlay" @timeupdate="change()" @ended="next()" @error="next()"></audio>
+    <audio :src="tempSrc" autoplay id="audioPlay" @timeupdate="change()" @ended="next()" @error="next()"></audio>
     <div class="audio-panel-control" @click="togglePanel" :class="{'toggleContral':toggleHide}">
       <mt-spinner type="snake" :size="27" v-show="audioLoadding"></mt-spinner>
     </div>
@@ -26,11 +26,16 @@
     name: 'player',
     data(){
       return {
-        toggleHide: false
+        toggleHide: false,
+        tempSrc:'/static/music/1.mp3'
       }
     },
     computed: {
       ...mapGetters(['audio', 'audioLoadding', 'showPlayer', 'isPlay'])
+    },
+    mounted(){
+      // console.log(this);
+      this.isPlay = true;
     },
     methods: {
       togglePanel(){
@@ -51,6 +56,7 @@
       },
       change(){
         var time = document.getElementById('audioPlay').currentTime
+        console.log(time)
         if (this.audio.currentFlag) {
           document.getElementById('audioPlay').currentTime = this.audio.currentLength;
           this.$store.commit('setCurrent', false);

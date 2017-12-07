@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mt-swipe :auto="5000">
+    <mt-swipe :auto="5000" @change="handleChange">
       <mt-swipe-item>
         <img src="../assets/banner1.jpg">
       </mt-swipe-item>
@@ -14,7 +14,7 @@
         <img src="../assets/banner4.jpg">
       </mt-swipe-item>
     </mt-swipe>
-
+    <div class="swipe-tips">{{swipesongname}}</div>
     <div>
       <mt-cell v-for="(item,index) in songList" :title="item.title" @click.native="playAudio(index)">
         <img src="../assets/images/download_icon.png" width="20" height="20">
@@ -29,7 +29,8 @@
   export default{
     data(){
       return {
-        songList: []
+        songList: [],
+        swipesongname:'听海'
       }
     },
     created(){
@@ -37,6 +38,15 @@
     },
     components: {},
     methods: {
+      //轮播图切换
+      handleChange(index){
+        let swipesongmap = new Map([['0','听海'],['1','胆小鬼'],['2','小手拉大手'],['3','青花瓷']]);
+        swipesongmap.forEach((value,key,ownerMap)=>{
+          if(key == index){
+            this.swipesongname = value;
+          }
+        })
+      },
       get(){
         Indicator.open({
           text: '加载中...',
@@ -71,66 +81,9 @@
   .mint-swipe-indicators {
     bottom: 5px !important;
   }
-</style>
-<template>
-  <div>
-    <mt-swipe :auto="5000">
-      <mt-swipe-item>
-        <img src="../assets/banner1.jpg" alt="">
-      </mt-swipe-item>
-      <mt-swipe-item>
-        <img src="../assets/banner2.jpg" alt="">
-      </mt-swipe-item>
-      <mt-swipe-item>
-        <img src="../assets/banner3.jpg" alt="">
-      </mt-swipe-item>
-      <mt-swipe-item>
-        <img src="../assets/banner4.jpg" alt="">
-      </mt-swipe-item>
-    </mt-swipe>
-
-    <div>
-      <mt-cell v-for="(item,index) in songList" :title="item.title" @click.native="playAudio(index)">
-        <img src="../assets/images/download_icon.png" alt="" width="20" height="20">
-      </mt-cell>
-    </div>
-  </div>
-</template>
-
-<script type="es6">
-  import { Swipe, SwipeItem,Indicator,Cell } from 'mint-ui';
-  import list_index from '../jsons/list_index'
-  import {INIT,PLAY_AUDIO} from '../mixins'
-  export default{
-    mixins:[INIT,PLAY_AUDIO],
-    methods: {
-      getList(){
-        Indicator.open({
-          text: '加载中...',
-          spinnerType: 'snake'
-        });
-        this.parseList(list_index);
-      },
-      parseList(data){
-        setTimeout(()=> {
-          Indicator.close()
-          this.songList = data;
-        }, 1000)
-      }
-    }
-  }
-</script>
-<style>
-  .mint-swipe {
-    height: 39vw !important;
-  }
-
-  .mint-swipe-indicator {
-    width: 12px !important;
-    height: 12px !important;
-  }
-
-  .mint-swipe-indicators {
-    bottom: 5px !important;
+  .swipe-tips{
+    color:blue;
+    text-align: center;
   }
 </style>
+

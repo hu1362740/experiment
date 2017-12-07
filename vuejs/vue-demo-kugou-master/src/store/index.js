@@ -105,6 +105,8 @@ const store = new Vuex.Store({
           audio = {songUrl, imgUrl, title, singer, songLength, currentLength};
         commit('setAudio', audio);
         commit('toggleAudioLoadding', false);
+      },err =>{
+        console.log(err);
       });
     },
     getLrc({commit,state}, hash){

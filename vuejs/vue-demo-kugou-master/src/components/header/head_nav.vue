@@ -19,6 +19,9 @@
     computed: {
       ...mapState(['headNav'])
     },
+    mounted(){
+      console.log(this.headNav);
+    },
     methods: {
       goRouter(index){
         this.$store.commit('setHeadNav', index);

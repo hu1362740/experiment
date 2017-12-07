@@ -19,7 +19,10 @@
     name: 'head-logo',
     methods: {
       searchRouter(){
+        console.log(this.detailPlayerFlag);
+        console.log(this.$store.getters.detailPlayerFlag);
         this.$store.commit('showDetailPlayer',false);
+        console.log(this.$store.getters.detailPlayerFlag);
         this.$router.push({path: '/search'});
       }
     }
