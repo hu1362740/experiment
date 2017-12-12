@@ -2,9 +2,9 @@
   <div id="app">
     <k-head></k-head>
     <div class="main">
-      <keep-alive>
+<!--       <keep-alive> -->
         <router-view></router-view>
-      </keep-alive>
+<!--       </keep-alive> -->
     </div>
     <player></player>
     <detail-player></detail-player>

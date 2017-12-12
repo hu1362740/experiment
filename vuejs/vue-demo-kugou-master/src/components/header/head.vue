@@ -15,6 +15,9 @@
     computed: {
       ...mapGetters(['head'])
     },
+    mounted(){
+      // console.log(this.head)
+    },
     name: 'k-head',
     components: {headLogo, headNav, rankHead}
   }
