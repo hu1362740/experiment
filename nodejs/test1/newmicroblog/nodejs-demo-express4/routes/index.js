@@ -6,6 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+<<<<<<< HEAD
+=======
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Express' });
 });
@@ -36,4 +38,5 @@ router.post('/doLogin', function(req, res, next) {
 // res.redirect('/login');
 // };
 
+>>>>>>> ddf15dc9ef9db339b166842e728707fc346ed104
 module.exports = router;
