@@ -19,7 +19,9 @@
     <![endif]-->
   <style type="text/css">
       .main{
-        margin-top:20px;
+      }
+      .container-main>div{
+                        background: #fff;
       }
       .container-title4{
         padding-bottom: 20px;
@@ -43,6 +45,9 @@
       .head{
         position: relative;
       }
+      .head-img img{
+        width:100%;
+      }
       .head-instruction{
         position: absolute;
         bottom:0;
@@ -53,16 +58,58 @@
         color:#fff;
         padding-left:15px;
       }
+      .head-instruction h5{
+        font-size:16px;
+      }
       .row-main{
         display:-moz-box; /* Firefox */
         display:-webkit-box; /* Safari and Chrome */
         display:box;
+        padding-bottom: 15px;
+        padding-top: 20px;
       }
       .row-col{
         -moz-box-flex:1.0; /* Firefox */
         -webkit-box-flex:1.0; /* Safari and Chrome */
         box-flex:1.0;
         text-align: center;
+      }
+      .all-order{
+        border-top: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
+        padding: 15px 20px;
+        position: relative;
+      }
+      .all-order span{
+        padding-left:20px;
+      }
+      .all-order i.icon-right{
+        position: absolute;
+        right:20px;
+      }
+      .menu-list ul{
+        padding-left: 10px;
+        border-bottom:1px solid #efefef;
+      }
+      .menu-list ul li{
+        list-style-type:none;
+        padding: 10px 0;
+        padding-left:10px;
+        border-bottom:1px solid #efefef;
+        position: relative;
+      }
+      .menu-list ul li span{
+        padding-left:20px;
+      }
+      .menu-list ul li i.icon-right{
+        position: absolute;
+        right: 20px;
+      }
+      .menu-list ul li.last{
+        border: none;
+      }
+      .gray{
+        color:#666;
       }
   </style>
   </head>
@@ -81,30 +128,44 @@
 <!--main begin-->
 <div class="main">
     <div class="container-main">
-    <div class="row-main">
-        <div class="row-col">
-          <div><span class="glyphicon glyphicon-film" aria-hidden="true"></span></div>
-          <div>待付款</div>
+        <div class="row-main">
+            <div class="row-col">
+                <div><span class="glyphicon glyphicon-film" aria-hidden="true"></span></div>
+                <div>待付款</div>
+            </div>
+            <div class="row-col">
+                <div><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></div>
+                <div>待接单</div>
+            </div>
+            <div class="row-col">
+                <div><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span></div>
+                <div>待发货</div>
+            </div>
+            <div class="row-col">
+                <div><span class="glyphicon glyphicon-book" aria-hidden="true"></span></div>
+                <div>已发货</div>
+            </div>
+            <div class="row-col">
+                <div><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span></div>
+                <div>已完成</div>
+            </div>
         </div>
-        <div class="row-col">
-          <div><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></div>
-          <div>待接单</div>
+        <div class="all-order">
+                <i class="iconfont">&#xe791;</i><span>全部订单</span><i class="iconfont icon-right gray">&#xe6a3;</i>
         </div>
-        <div class="row-col">
-          <div><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span></div>
-          <div>待发货</div>
+        <div class="menu-list">
+          <ul>
+            <li><i class="iconfont">&#xe6af;</i><span>我的购物车</span><i class="iconfont icon-right gray">&#xe6a3;</i></li>
+            <li><i class="iconfont">&#xe77d;</i><span>我的返现</span><i class="iconfont icon-right gray">&#xe6a3;</i></li>
+            <li class="last"><i class="iconfont">&#xe74a;</i><span>我的心愿单</span><i class="iconfont icon-right gray">&#xe6a3;</i></li>
+          </ul>
         </div>
-        <div class="row-col">
-          <div><span class="glyphicon glyphicon-book" aria-hidden="true"></span></div>
-          <div>已发货</div>
-        </div>
-        <div class="row-col">
-          <div><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span></div>
-          <div>已完成</div>
-        </div>
-    </div>
-                <div class="all-order">
-          <span class="glyphicon glyphicon-book" aria-hidden="true"></span><span>全部订单</span>
+        <div class="menu-list" style="margin-top:30px;border-top:1px solid #efefef">
+          <ul>
+            <li><i class="iconfont">&#xe7dd;</i><span>会员中心</span><i class="iconfont icon-right gray">&#xe6a3;</i></li>
+            <li><i class="iconfont">&#xe697;</i><span>我的积分</span><i class="iconfont icon-right gray">&#xe6a3;</i></li>
+            <li class="last"><i class="iconfont">&#xe6cb;</i><span>管理账号</span><i class="iconfont icon-right gray">&#xe6a3;</i></li>
+          </ul>
         </div>
     </div>
 </div>
@@ -133,5 +194,6 @@
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="http://10.16.4.190:8080/target/target-script-min.js#anonymous"></script>
   </body>
 </html>
