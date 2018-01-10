@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>蕗果菓</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/base/base.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    .main {}
+
+    body {
+        background: #fff;
+        font-size: 12px;
+    }
+
+    .row-custom {
+        display: -moz-box;
+        /* Firefox */
+        display: -webkit-box;
+        /* Safari and Chrome */
+        display: box;
+        margin: 10px 10px;
+    }
+
+    .row-custom>div {
+        -moz-box-flex: 1.0;
+        /* Firefox */
+        -webkit-box-flex: 1.0;
+        /* Safari and Chrome */
+        box-flex: 1.0;
+        text-align: center;
+        background: #666666;
+        color: #fff;
+        border: 1px solid #666666;
+        padding: 3px 0;
+    }
+
+    .row-custom>div.active {
+        color: #666666;
+        background: #fff;
+    }
+
+    .row-custom>div.row-custom-leftcont {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .row-custom>div.row-custom-rightcont {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .menu-list ul {
+        padding-left: 10px;
+        border-bottom: 3px solid #efefef;
+        border-image:url(image/border-icon.png) 30 30 round;
+    }
+
+    .menu-list ul li {
+        list-style-type: none;
+        padding: 10px 0;
+        padding-left: 10px;
+        border-bottom: 1px solid #efefef;
+        position: relative;
+    }
+
+    .menu-list ul li span {
+        padding-left: 20px;
+    }
+
+    .menu-list ul li i.icon-right {
+        position: absolute;
+        right: 20px;
+        top: 3px;
+    }
+
+    .menu-list ul li.last {
+        border: none;
+    }
+   .gray{
+        color:#666;
+   }
+    </style>
+</head>
+
+<body>
+    <!--head begin-->
+    <div class="head">
+        <div class="row-custom">
+            <div class="row-custom-leftcont text-center active">
+                商家配送
+            </div>
+            <div class="row-custom-rightcont text-center">
+                到店自提
+            </div>
+        </div>
+    </div>
+    <!--head end-->
+    <!--main begin-->
+    <div class="main">
+        <div class="menu-list" style="margin-top:15px;">
+            <ul>
+                <li><span>会员中心</span><i class="iconfont icon-right gray">&#xe6a3;</i></li>
+                <li><span>我的积分</span><i class="iconfont icon-right gray">&#xe6a3;</i></li>
+                <li class="last"><span>管理账号</span><i class="iconfont icon-right gray">&#xe6a3;</i></li>
+            </ul>
+        </div>
+    </div>
+    <!--main end-->
+    <!--foot begin-->
+    <div class="foot">
+    </div>
+    <!--foot end-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
