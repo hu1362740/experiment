@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>兔兔苏州麻将代理后台</title>
+
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/base/base.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style type="text/css">
+      
+  </style>
+  </head>
+  <body>
+    <!--head begin-->
+<div class="head">
+<h5>充值模块</h5>
+<div class="tips"></div>
+</div>
+<!--head end-->
+<!--main begin-->
+<div class="main" style="margin-top:55px;">
+    
+<div class="box player-recharge-box">
+  <h5>玩家充值</h5>
+  <ul>
+    <li>
+        <div class="fl"><div class="player-recharge-msg">玩家ID：</div>
+            <input type="text" name="" class="custom-form-control" />
+        </div>
+        <div class="fr">
+            <button type="button" class="custom-btn-sm">查询</button>
+        </div>
+        <div class="clear">
+          
+        </div>
+    </li>
+    <li>
+        <div class="fl"><div class="player-recharge-msg">玩家昵称：</div>
+            <span>小花</span>
+        </div>
+        <div class="fr">
+            剩余萝卜：
+            <span>50颗</span>
+        </div>
+        <div class="clear">
+          
+        </div>
+    </li>
+    <li>
+        <div class="fl"><div class="player-recharge-msg">充值：</div>
+            <input type="text" name="" class="custom-form-control" style="width:50px" />
+            <div class="player-recharge-msg" style="margin-left:20px;width: 50px">赠送：</div><input type="text" name="" class="custom-form-control" style="width:50px"/>
+        </div>
+        <div class="fr">
+            <button type="button" class="custom-btn-sm">确认</button>
+        </div>
+        <div class="clear">
+          
+        </div>
+    </li>
+    <li>
+        <div><div class="player-recharge-msg">提示：</div>您本次为玩家000108充值50颗萝卜成功！
+        </div>
+    </li>
+</ul>
+</div>
+
+<div class="box proxy-recharge-box">
+  <h5>代理充值</h5>
+  <ul>
+    <li>
+        <div><div class="proxy-recharge-msg">代理ID：</div>
+            <input type="text" name="" class="custom-form-control" />
+        </div>
+    </li>
+    <li>
+        <div class="fl"><div class="proxy-recharge-msg">充值：</div>
+            <input type="number" name="" class="custom-form-control" style="width:50px" />
+            <div class="proxy-recharge-msg" style="margin-left:20px;width: 50px">赠送：</div><input type="number" name="" class="custom-form-control" style="width:50px"/>
+        </div>
+        <div class="fr">
+            <button type="button" class="custom-btn-sm">确认</button>
+        </div>
+        <div class="clear">
+          
+        </div>
+    </li>
+    <li>
+        <div><div class="proxy-recharge-msg">提示：</div>您本次为玩家000108充值50颗萝卜成功！
+        </div>
+    </li>
+</ul>
+</div>
+
+<div class="box purchase-recharge-box">
+  <h5>采购充值</h5>
+  <ul>
+    <li>
+        您目前是VIP3，可享受0.5元/颗萝卜，再累积充值2450元可升级为VIP4，享受0.4元/颗单价！
+    </li>
+    <li>
+      <div class="purchase-recharge-msg">采购金额：</div><select class="custom-form-control" placeholder="请点击选择您本次采购金额！">
+  <option>充值200元，购买萝卜366颗，赠送0颗</option>
+  <option>充值500元，购买萝卜910颗，赠送90颗</option>
+  <option>充值300元，购买萝卜600颗，赠送0颗</option>
+</select>
+    </li>
+    <li class="purchase-recharge-box-method">
+<div class="payment-method-box"><img src="image/weixin.png"/><div class="payment-method"><div class="payment-name-cn">微信支付</div><div class="payment-name-en">WEICHATPAY</div></div></div>
+<div class="payment-method-box"><img src="image/zhifubao.png"/><div class="payment-method"><div class="payment-name-cn" style="padding-top:2px">支付宝支付</div><div class="payment-name-en">ALIPAY</div></div></div>
+<div style="line-height: 35px;text-align: center;font-size: 14px;font-weight: bold">余额支付</div>
+    </li>
+</ul>
+<div style="background: #fff8f4;height: 20px;"></div>
+</div>
+</div>
+<!--main end-->
+<!--foot begin-->
+<div class="foot">
+        <div>
+            <a href="proxy.html">
+                <div><i class="iconfont">&#xe737;</i></div>
+                <div>代理推广</div>
+            </a>
+        </div>
+        <div class="active">
+            <a href="charge.html">
+                <div><i class="iconfont">&#xf029c;</i></div>
+                <div>充值模块</div>
+            </a>
+        </div>
+        <div>
+            <a href="financial.html">
+                <div><i class="iconfont">&#xe74a;</i></div>
+                <div>财务系统</div>
+            </a>
+        </div>
+        <div>
+            <a href="record.html">
+                <div><i class="iconfont">&#xe697;</i></div>
+                <div>数据记录</div>
+            </a>
+        </div>
+    </div>
+<!--foot end-->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/base.js"></script>
+  </body>
+</html>
