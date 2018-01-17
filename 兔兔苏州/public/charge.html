@@ -19,34 +19,34 @@
   </head>
   <body>
     <!--head begin-->
-<div class="head">
+<!-- <div class="head">
 <h5>充值模块</h5>
 <div class="tips"></div>
-</div>
+</div> -->
 <!--head end-->
 <!--main begin-->
-<div class="main" style="margin-top:55px;">
+<div class="main">
     
 <div class="box player-recharge-box">
   <h5>玩家充值</h5>
   <ul>
     <li>
-        <div class="fl"><div class="player-recharge-msg">玩家ID：</div>
-            <input type="text" name="" class="custom-form-control" />
+        <div class="fl box-line"><div class="player-recharge-msg">玩家ID：</div>
+            <input type="text" name="" class="custom-input" placeholder="请输入玩家ID" />
         </div>
-        <div class="fr">
-            <button type="button" class="custom-btn-sm">查询</button>
+        <div class="fr box-line">
+            <button type="button" class="custom-primary">查询</button>
         </div>
         <div class="clear">
           
         </div>
     </li>
     <li>
-        <div class="fl"><div class="player-recharge-msg">玩家昵称：</div>
+        <div class="fl box-line"><div class="player-recharge-msg">玩家昵称：</div>
             <span>小花</span>
         </div>
-        <div class="fr">
-            剩余萝卜：
+        <div class="fr box-line">
+            <div class="player-recharge-msg">剩余萝卜：</div>
             <span>50颗</span>
         </div>
         <div class="clear">
@@ -54,20 +54,21 @@
         </div>
     </li>
     <li>
-        <div class="fl"><div class="player-recharge-msg">充值：</div>
-            <input type="text" name="" class="custom-form-control" style="width:50px" />
-            <div class="player-recharge-msg" style="margin-left:20px;width: 50px">赠送：</div><input type="text" name="" class="custom-form-control" style="width:50px"/>
-        </div>
-        <div class="fr">
-            <button type="button" class="custom-btn-sm">确认</button>
-        </div>
-        <div class="clear">
-          
+        <div class="box-line"><div class="player-recharge-msg">充值金额：</div>
+            <input type="text" name="" class="custom-input" placeholder="请输入充值金额" />
         </div>
     </li>
     <li>
-        <div><div class="player-recharge-msg">提示：</div>您本次为玩家000108充值50颗萝卜成功！
+        <div class="box-line"><div class="player-recharge-msg">赠送数量：</div>
+            <input type="text" name="" class="custom-input" placeholder="请输入赠送数量"/>
         </div>
+    </li>
+    <li>
+        <div class="box-information"><div class="player-recharge-msg">提示信息：</div>您本次为玩家000108充值50颗萝卜成功！
+        </div>
+    </li>
+    <li class="text-center">
+        <button type="button" class="custom-primary">确认</button>
     </li>
 </ul>
 </div>
@@ -76,25 +77,26 @@
   <h5>代理充值</h5>
   <ul>
     <li>
-        <div><div class="proxy-recharge-msg">代理ID：</div>
-            <input type="text" name="" class="custom-form-control" />
+        <div class="box-line"><div class="proxy-recharge-msg">代理ID：</div>
+            <input type="text" name="" class="custom-input" placeholder="请输入代理ID"/>
         </div>
     </li>
     <li>
-        <div class="fl"><div class="proxy-recharge-msg">充值：</div>
-            <input type="number" name="" class="custom-form-control" style="width:50px" />
-            <div class="proxy-recharge-msg" style="margin-left:20px;width: 50px">赠送：</div><input type="number" name="" class="custom-form-control" style="width:50px"/>
-        </div>
-        <div class="fr">
-            <button type="button" class="custom-btn-sm">确认</button>
-        </div>
-        <div class="clear">
-          
+        <div class="box-line"><div class="proxy-recharge-msg">充值金额：</div>
+            <input type="number" name="" class="custom-input" placeholder="请输入充值金额" />
         </div>
     </li>
     <li>
-        <div><div class="proxy-recharge-msg">提示：</div>您本次为玩家000108充值50颗萝卜成功！
+        <div class="box-line"><div class="proxy-recharge-msg">赠送数量：</div>
+            <input type="text" name="" class="custom-input" placeholder="请输入赠送数量" />
         </div>
+    </li>
+    <li>
+        <div class="box-information"><div class="proxy-recharge-msg">提示信息：</div>您本次为玩家000108充值50颗萝卜成功！
+        </div>
+    </li>
+    <li class="text-center">
+        <button type="button" class="custom-primary">确认</button>
     </li>
 </ul>
 </div>
@@ -103,14 +105,18 @@
   <h5>采购充值</h5>
   <ul>
     <li>
+        <div style="padding: 5px 0;color:#3c8df1">
         您目前是VIP3，可享受0.5元/颗萝卜，再累积充值2450元可升级为VIP4，享受0.4元/颗单价！
+    </div>
+        
     </li>
-    <li>
-      <div class="purchase-recharge-msg">采购金额：</div><select class="custom-form-control" placeholder="请点击选择您本次采购金额！">
+    <li style="padding: 18px 0;"><div class="box-amount-line">
+      <div class="purchase-recharge-msg">采购金额：</div><select class="custom-select" placeholder="请点击选择您本次采购金额！">
   <option>充值200元，购买萝卜366颗，赠送0颗</option>
   <option>充值500元，购买萝卜910颗，赠送90颗</option>
   <option>充值300元，购买萝卜600颗，赠送0颗</option>
 </select>
+</div>
     </li>
     <li class="purchase-recharge-box-method">
 <div class="payment-method-box"><img src="image/weixin.png"/><div class="payment-method"><div class="payment-name-cn">微信支付</div><div class="payment-name-en">WEICHATPAY</div></div></div>

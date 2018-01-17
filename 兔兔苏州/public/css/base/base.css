@@ -1,78 +1,127 @@
      /*
-
+公用样式
      */
+
      * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+     }
+
      body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
-    background-color: #fff;
-}
-table {
-    background-color: transparent;
-}
-table {
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-td,
-th {
-  padding: 0;
-}
-input, button, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
+         /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+         font-size: 14px;
+         line-height: 1.42857143;
+         color: #333;
+         background-color: #fff;
+     }
+
+     table {
+         background-color: transparent;
+     }
+
+     table {
+         border-spacing: 0;
+         border-collapse: collapse;
+     }
+
+     td,
+     th {
+         padding: 0;
+     }
+
+     input,
+     button,
+     select,
+     textarea {
+         font-family: inherit;
+         font-size: inherit;
+         line-height: inherit;
+     }
 
 
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-    -webkit-appearance: button;
-    cursor: pointer;
-}
+     button,
+     html input[type="button"],
+     input[type="reset"],
+     input[type="submit"] {
+         -webkit-appearance: button;
+         cursor: pointer;
+     }
 
-button, select {
-    text-transform: none;
-}
+     button,
+     select {
+         text-transform: none;
+     }
 
-button {
-    overflow: visible;
-}
+     button {
+         overflow: visible;
+     }
 
-button, input, optgroup, select, textarea {
-    margin: 0;
-    font: inherit;
-    color: inherit;
-}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.1;
-    color: inherit;
-}
-h5, .h5 {
-    font-size: 14px;
-}
+     button,
+     input,
+     optgroup,
+     select,
+     textarea {
+         margin: 0;
+         font: inherit;
+         color: inherit;
+     }
 
-h4, .h4, h5, .h5, h6, .h6 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.1;
-    color: inherit;
-}
-p {
-    margin: 0 0 10px;
-}
-/**/
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6,
+     .h1,
+     .h2,
+     .h3,
+     .h4,
+     .h5,
+     .h6 {
+         font-family: inherit;
+         font-weight: 500;
+         line-height: 1.1;
+         color: inherit;
+     }
+
+     h5,
+     .h5 {
+         font-size: 14px;
+     }
+
+     h4,
+     .h4,
+     h5,
+     .h5,
+     h6,
+     .h6 {
+         margin-top: 10px;
+         margin-bottom: 10px;
+     }
+
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6,
+     .h1,
+     .h2,
+     .h3,
+     .h4,
+     .h5,
+     .h6 {
+         font-family: inherit;
+         font-weight: 500;
+         line-height: 1.1;
+         color: inherit;
+     }
+
+     p {
+         margin: 0 0 10px;
+     }
+     /*公用样式*/
 
      @font-face {
          font-family: 'iconfont';
@@ -90,20 +139,24 @@ p {
          -webkit-font-smoothing: antialiased;
          -webkit-text-stroke-width: 0.2px;
          -moz-osx-font-smoothing: grayscale;
+         color: #b9b9b9;
      }
+
      html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-}
+         /*font-family: sans-serif;*/
+         /*-webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;*/
+     }
+
      body {
          background: #efeff4;
          font-size: 12px;
-           margin: 0;
+         margin: 0;
          /*color:#65646b*/
      }
 
-     input {
+     input,
+     button {
          outline: none;
      }
 
@@ -125,7 +178,6 @@ p {
 
      a:active {
          text-decoration: none;
-         /* 指正在点的链接*/
      }
 
      ul {
@@ -140,6 +192,8 @@ p {
 
      .clear {
          clear: both;
+         height: 0;
+         overflow: hidden;
      }
 
      .fl {
@@ -180,7 +234,7 @@ p {
          bottom: 0;
          width: 100%;
          background: #ffffff;
-         border: 1px solid #dbd6d2;
+         border-top: 1px solid #e9e9e9;
          padding-top: 10px;
          display: -moz-box;
          /* Firefox */
@@ -191,7 +245,7 @@ p {
 
      .foot .active i,
      .foot .active div {
-         color: #ff711c;
+         color: #fa4b28;
      }
 
      .foot>div {
@@ -204,9 +258,14 @@ p {
          /*padding: 10px;*/
      }
 
+     .foot>div>a {
+         color: #b9b9b9;
+         font-size: 12px;
+     }
+
      .main {
          /* margin: 0 10px;*/
-         margin-top: 45px;
+         /*margin-top: 45px;*/
          margin-bottom: 70px;
      }
 
@@ -244,18 +303,35 @@ p {
          border-radius: 3px;
      }
 
-     .player-recharge-msg {
+     .player-recharge-msg,
+     .proxy-recharge-msg,
+     .purchase-recharge-msg {
          color: #6a6a6a;
          font-weight: bold;
-         width: 70px;
+         width: 80px;
          display: inline-block;
      }
 
-     .proxy-recharge-msg {
-         color: #6a6a6a;
-         font-weight: bold;
-         width: 70px;
-         display: inline-block;
+     .box-information {
+         padding: 19px 0;
+     }
+
+     .box-amount-line {
+         position: relative;
+     }
+
+     .box-amount-line .purchase-recharge-msg {
+         position: absolute;
+     }
+
+     .box-amount-line .custom-select {
+         padding-left: 80px;
+         -moz-box-sizing: border-box;
+         -webkit-box-sizing: border-box;
+         -o-box-sizing: border-box;
+         -ms-box-sizing: border-box;
+         box-sizing: border-box;
+         width: 100%;
      }
 
      .main .box {
@@ -270,33 +346,40 @@ p {
          margin: 0;
          font-weight: bold;
          font-size: 14px;
+         background: #efeff4;
      }
 
      .main .box ul {
          list-style: none;
          margin: 0 10px;
          padding: 0;
-         padding-top: 8px;
+         /*padding-top: 8px;*/
      }
 
      .main .box ul li {
          padding: 8px 0;
          font-size: 14px;
          color: #191919;
-         /*border-bottom: 1px solid #efefef;*/
+         border-bottom: 1px solid #efefef;
+     }
+
+     .box-line {
+         height: 42px;
+         line-height: 42px;
+     }
+
+     .main .box ul li>div {
+         /* height: 45px;
+        line-height: 45px;*/
      }
 
      .main .box ul li:last-child {
          border-bottom: none;
      }
-
-     .main .box ul li input,
-     .main .box ul li select {
+     /*.main .box ul li input,*/
+     /*.main .box ul li select {
          width: 172px;
          display: inline-block;
-         font-size: 12px;
-         height: 25px;
-         line-height: 25px;
          color: #555;
          padding: 0px 6px;
          background-color: #fff;
@@ -308,14 +391,40 @@ p {
          -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
          -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+     }*/
+
+     .custom-input {
+         color: #191919;
+         font-family: "microsoft yahei";
+         margin: 0;
+         padding: 0;
+         border: none;
+         outline: none;
+         -moz-box-sizing: content-box;
+         -webkit-box-sizing: content-box;
+         -o-box-sizing: content-box;
+         -ms-box-sizing: content-box;
+         box-sizing: content-box;
+         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+         background: none;
      }
 
-     .purchase-recharge-msg {
-         color: #6a6a6a;
-         font-weight: bold;
-         width: 70px;
-         display: inline-block;
+     .custom-select {
+         color: #191919;
+         font-family: "microsoft yahei";
+         margin: 0;
+         padding: 0;
+         border: none;
+         outline: none;
+         -moz-box-sizing: content-box;
+         -webkit-box-sizing: content-box;
+         -o-box-sizing: content-box;
+         -ms-box-sizing: content-box;
+         box-sizing: content-box;
+         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+         background: none;
      }
+
 
      .main .box ul li.purchase-recharge-box-method {
          display: -moz-box;
@@ -382,8 +491,8 @@ p {
          /*        border-right: 1px solid #b9bbbf;*/
          font-size: 14px;
          color: #65646b;
-         height: 43px;
-         line-height: 43px;
+         height: 45px;
+         line-height: 45px;
      }
 
      .blue_block-zone {
@@ -471,6 +580,7 @@ p {
          font-size: 14px;
          color: #ff711c;
          position: relative;
+         /*font-weight: bold;*/
      }
 
      .password-box-container {
@@ -479,8 +589,8 @@ p {
 
      .password-box-content {
          border-bottom: 1px solid #EBEBEB;
-         height: 35px;
-         line-height: 35px;
+         height: 42px;
+         line-height: 42px;
          color: #848484;
          font-size: 14px;
          position: relative;
@@ -490,8 +600,11 @@ p {
          width: 100%;
          border: none;
          padding: 0;
-         height: 34px;
+         height: 40px;
+         line-height: 40px;
          padding-left: 105px;
+         padding-right: 55px;
+         color: #333;
          outline: none;
      }
 
@@ -516,6 +629,7 @@ p {
          padding: 10px 0;
          /*color:#65646b;*/
          color: #ff711c;
+         /*font-weight: bold;*/
          position: relative;
      }
 
@@ -529,7 +643,8 @@ p {
          position: absolute;
          right: 5px;
          top: 4px;
-         color: #65646b;
+         color: #ff711c;
+         font-weight: normal;
      }
 
      .vip-box-title i.up,
@@ -566,29 +681,26 @@ p {
      }
 
      .add-proxy {
-         padding: 10px 0;
+         /*padding: 10px 0;*/
      }
 
      .add-proxy-button {
-         padding: 10px;
+         padding: 0 10px;
      }
 
      .add-proxy-button i.up {
          display: none;
      }
 
-     .add-proxy>div {
-         /*border: 1px solid #b9bbbf;*/
-         /*margin-top: 10px;*/
-         background: #fff;
-     }
-
      .add-proxy-button h5 {
-         text-align: center;
-         padding: 8px 0;
+         text-align: left;
+         /*padding: 8px 0;*/
+         height: 39px;
+         line-height: 39px;
          margin: 0;
          font-size: 14px;
-         color: #ff711c;
+         color: #000;
+         font-weight: bold;
      }
 
      .extension-record {
@@ -620,6 +732,60 @@ p {
          /*display: none;*/
          font-size: 14px;
          color: #848484;
+         background: #fff;
+     }
+
+     .add-proxy-btn {
+         color: #fff;
+         border-color: #3399ff;
+         display: inline-block;
+         margin-bottom: 0;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 1.42857143;
+         text-align: center;
+         white-space: nowrap;
+         vertical-align: middle;
+         -ms-touch-action: manipulation;
+         touch-action: manipulation;
+         cursor: pointer;
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+         background-image: none;
+         border: 1px solid transparent;
+         border-radius: 4px;
+         padding: 6px 12px;
+         background: #ff711c;
+         font-size: 12px;
+         border-radius: 3px;
+     }
+
+     .custom-primary {
+         color: #fff;
+         display: inline-block;
+         margin-bottom: 0;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 1.42857143;
+         text-align: center;
+         white-space: nowrap;
+         vertical-align: middle;
+         -ms-touch-action: manipulation;
+         touch-action: manipulation;
+         cursor: pointer;
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+         background-image: none;
+         border: 1px solid transparent;
+         border-radius: 4px;
+         padding: 6px 12px;
+         background: #ff711c;
+         font-size: 12px;
+         border-radius: 3px;
      }
 
      .add-proxy-box ul {
@@ -630,10 +796,15 @@ p {
      .add-proxy-box ul li {
          position: relative;
          border-bottom: 1px solid #efefef;
-         margin: 0 8px;
+         margin: 0 10px;
          /* padding: 5px 0;*/
-         height: 40px;
-    line-height: 40px;
+         height: 50px;
+         line-height: 50px;
+     }
+
+     .add-proxy-box ul li span {
+         color: #6a6a6a;
+         font-weight: bold;
      }
 
      .add-proxy-box ul li:last-child {
@@ -649,34 +820,50 @@ p {
      .add-proxy-box ul li .identifying-code {
          position: absolute;
          right: 0;
-         top: 5px;
-         height: 28px;
-         line-height: 28px;
-     }
-
-     .add-proxy-box ul li .identifying-code button {
-         height: 28px;
-         line-height: 28px;
-         border: none;
-         border-radius: 5px;
-         outline: none;
-         padding: 0 8px;
-         background: #3399ff;
-         font-size: 12px;
-         color: #fff;
+         top: 9px;
+         height: 30px;
+         line-height: 30px;
      }
 
      .add-proxy-box input {
          width: 100%;
          border: none;
          padding: 0;
-         height: 34px;
+         height: 48px;
+         line-height: 48px;
          padding-left: 80px;
          padding-right: 90px;
          outline: none;
          -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+     }
+
+     .custom-cancel {
+         color: #999;
+         border-color: #3399ff;
+         display: inline-block;
+         margin-bottom: 0;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 1.42857143;
+         text-align: center;
+         white-space: nowrap;
+         vertical-align: middle;
+         -ms-touch-action: manipulation;
+         touch-action: manipulation;
+         cursor: pointer;
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+         background-image: none;
+         border: 1px solid #d6d5d5;
+         border-radius: 4px;
+         padding: 6px 12px;
+         background: #f3f3f3;
+         font-size: 12px;
+         border-radius: 3px;
      }
      /*financal.html*/
 
@@ -772,8 +959,7 @@ p {
      .financial-amount-box p span {
          color: #ff711c;
      }
-
-     .financial-amount-box button {
+     /*.financial-amount-box button {
          background: #92d050;
          color: #ffffff;
          padding: 6px 18px;
@@ -781,7 +967,7 @@ p {
          border: none;
          font-size: 14px;
          border-radius: 5px;
-     }
+     }*/
 
      .financial-amount-box .cash {
          text-align: center;
@@ -818,24 +1004,67 @@ p {
          background: #fff;
          padding: 10px;
      }
-     .custom-table{
-        width: 100%;
+
+     .custom-table {
+         width: 100%;
      }
-     .tab-table .custom-table tr td{
-        /*border-bottom: 1px solid #efefef;*/
-        padding: 3px 3px;
-        vertical-align: top;
+
+     .tab-table .custom-table tr td {
+         /*border-bottom: 1px solid #efefef;*/
+         font-size: 12px;
+         padding: 3px 3px;
+         vertical-align: top;
      }
+
      .tab-table .custom-table tr.odd:first-child td {
-    padding-top:0px;
-}
-.tab-table .custom-table tr.even:last-child td {
-    border: none;
-}
-.tab-table .custom-table tr.even td {
-    border-bottom: 1px solid #efefef;
-    padding-bottom: 8px;
-}
-.tab-table .custom-table tr.odd td {
-    padding-top: 8px;
-}
+         padding-top: 0px;
+     }
+
+     .tab-table .custom-table tr.even:last-child td {
+         border: none;
+     }
+
+     .tab-table .custom-table tr.even td {
+         border-bottom: 1px solid #efefef;
+         padding-bottom: 8px;
+     }
+
+     .tab-table .custom-table tr.odd td {
+         padding-top: 8px;
+     }
+
+     .tab-table .custom-table tr.one:first-child td {
+         padding-top: 0px;
+     }
+
+     .tab-table .custom-table tr.four td {
+         border-bottom: 1px solid #efefef;
+         padding-bottom: 8px;
+     }
+
+     .tab-table .custom-table tr.four:last-child td {
+         border: none;
+     }
+
+     .tab-table .custom-table tr.border-bottom td {
+         border-bottom: 1px solid #efefef;
+         padding-bottom: 8px;
+     }
+
+     .tab-table .custom-table tr.padding-0 td {
+         padding-top: 0px;
+     }
+
+     .text-center {
+         text-align: center;
+     }
+
+     .tab-table .custom-table tr td.color41 {
+         /*        color:#414141;
+        font-size: 12px;
+        font-weight: bold;*/
+     }
+
+     .color74 {
+         color: #747474;
+     }
