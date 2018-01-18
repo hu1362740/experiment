@@ -306,10 +306,10 @@
      .player-recharge-msg,
      .proxy-recharge-msg,
      .purchase-recharge-msg {
-         color: #6a6a6a;
-         font-weight: bold;
-         width: 80px;
-         display: inline-block;
+    color: #191919;
+    /* font-weight: bold; */
+    width: 80px;
+    display: inline-block;
      }
 
      .box-information {
@@ -782,7 +782,7 @@
          background-image: none;
          border: 1px solid transparent;
          border-radius: 4px;
-         padding: 6px 12px;
+         padding: 8px 20px;
          background: #ff711c;
          font-size: 12px;
          border-radius: 3px;
@@ -803,8 +803,8 @@
      }
 
      .add-proxy-box ul li span {
-         color: #6a6a6a;
-         font-weight: bold;
+         color: #191919;
+         /*font-weight: bold;*/
      }
 
      .add-proxy-box ul li:last-child {
@@ -951,7 +951,7 @@
      .financial-amount-box p {
          padding: 10px 5px;
          margin: 0 10px;
-         border-top: 1px solid #848484;
+         border-top: 1px solid #efefef;
          color: #848484;
          letter-spacing: 1px;
      }
