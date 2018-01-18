@@ -9,9 +9,6 @@ $(function() {
                 $(".tab-table>div:eq("+index+")").addClass("active").siblings().removeClass("active");;
                 $(".blue_block").animate({left:number})
            });
-            // $(".password-box h5").click(function(){
-            //     $('#myModal').modal()
-            // })
             //弹出下拉层
             $(".password-box-title").click(function(){
                 if($(".password-box-container").is(":hidden")){
@@ -33,16 +30,9 @@ $(function() {
                 }
                 $(".vip-box-container").slideToggle("slow");
             });
-            // $(".add-proxy-button").click(function(){
-            //     if($(".add-proxy-box").is(":hidden")){
-            //         $(".add-proxy-button i.down").hide();
-            //         $(".add-proxy-button i.up").show();
-            //     }else{
-            //         $(".add-proxy-button i.down").show();
-            //         $(".add-proxy-button i.up").hide();
-            //     }
-            //     $(".add-proxy-box").slideToggle("slow");
-            // });
+            $(".foot>div").click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+                });
         }
     };
     base.init();

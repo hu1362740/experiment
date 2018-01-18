@@ -189,7 +189,12 @@
      .main {
          margin-bottom: 52px;
      }
-
+     .tab{
+        position: fixed;
+        top:0;
+        left: 0;
+        right:0;
+     }
      .clear {
          clear: both;
          height: 0;
@@ -516,7 +521,7 @@
 
      .tab-table {
          /*border: 1px solid #b9bbbf;*/
-         margin-top: 10px;
+         margin-top: 55px;
          /*background: #fff;*/
          font-size: 14px;
          color: #848484;
@@ -534,7 +539,7 @@
      .my-proxy table tr td {
          border-top: none;
          color: #848484;
-         font-size: 14px;
+         font-size: 12px;
          padding: 3px 0px;
      }
 
@@ -715,7 +720,7 @@
 
      .extension-record table tr td {
          padding: 3px 0px;
-         font-size: 14px;
+         font-size: 12px;
          color: #848484;
      }
 
@@ -782,7 +787,8 @@
          background-image: none;
          border: 1px solid transparent;
          border-radius: 4px;
-         padding: 8px 20px;
+         width: 100%;
+         padding: 8px 0px;
          background: #ff711c;
          font-size: 12px;
          border-radius: 3px;
@@ -971,7 +977,7 @@
 
      .financial-amount-box .cash {
          text-align: center;
-         padding: 10px 0;
+         padding: 10px 10px;
          padding-top: 5px;
      }
 
