@@ -18,6 +18,7 @@
 
      body {
          background: #f9f9f9;
+         font-family: "microsoft yahei";
      }
 
      a {
@@ -47,6 +48,7 @@
 
      .clear {
          clear: both;
+         height: 0;
      }
 
      .fl {
@@ -91,9 +93,11 @@
      .dialog-body {
          padding: 0 10px;
      }
-.dialog-body h4{
-    font-size: 16px;
-}
+
+     .dialog-body h4 {
+         font-size: 16px;
+     }
+
      .dialog-pic img {
          height: 50px;
      }
@@ -103,9 +107,11 @@
          border-bottom: 1px solid #f3f3f3;
          padding: 10px 0;
      }
-.dialog-firut-name h4{
-    font-size: 16px;
-}
+
+     .dialog-firut-name h4 {
+         font-size: 16px;
+     }
+
      .dialog-firut-name h4,
      .dialog-firut-name p {
          margin: 0;
@@ -126,7 +132,7 @@
          border: 1px solid #ccc;
          margin-right: 10px;
          color: #333;
-    background-color: #fff;
+         background-color: #fff;
      }
 
      .dialog-firut-button button.active {

@@ -21,9 +21,12 @@
 
     body {
         background: #fff;
-        font-size: 12px;
+        font-size: 14px;
+        color: #191919;
     }
-
+    input{
+            outline: none;
+    }
     .row-custom {
         display: -moz-box;
         /* Firefox */
@@ -43,7 +46,8 @@
         background: #666666;
         color: #fff;
         border: 1px solid #666666;
-        padding: 3px 0;
+            padding: 8px 0;
+    font-size: 14px;
     }
 
     .row-custom>div.active {
@@ -69,19 +73,26 @@
 
     .menu-list ul li {
         list-style-type: none;
-        padding: 10px 0;
+        padding: 15px 0;
         padding-left: 10px;
         border-bottom: 1px solid #efefef;
         position: relative;
     }
 
     .menu-list ul li span {
+        display: inline-block;
+            width: 85px;
+    }
+
+    .menu-list ul li input {
+        border: none;
     }
 
     .menu-list ul li i.icon-right {
         position: absolute;
         right: 20px;
         top: 3px;
+        color:#848484;
     }
 
     .menu-list ul li.last {
@@ -89,6 +100,20 @@
     }
    .gray{
         color:#666;
+   }
+   .menu-detail h5{
+    padding: 10px 10px;
+    font-size: 14px;
+   }
+   .menu-detail-container{
+    background: #fafafa;
+    padding: 15px 10px;
+   }
+   .menu-detail-container img{
+    height: 65px;
+   }
+   .menu-detail-describe{
+    /*display: inline-block;*/
    }
     </style>
 </head>
@@ -115,6 +140,20 @@
                 <li><span>提货时间：</span><input type="text" placeholder="请选择商家提货地址" /><i class="iconfont icon-right gray">&#xe6a3;</i></li>
                 <li class="last"><span>提货地址：</span><i class="iconfont icon-right gray">&#xe6a3;</i></li>
             </ul>
+        </div>
+        <div class="menu-detail">
+            <h5>27Fruits甘草水果</h5>
+            <div class="menu-detail-container">
+                <div class="fl"><img src="image/27-5.jpg"/></div>
+                <div class="menu-detail-describe">
+                    <div>
+                        <div class="fl">维c满满盒</div>
+                        <div class="fr">¥42.00</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
         </div>
     </div>
     <!--main end-->
