@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>1</title>
+  <style type="text/css">
+  *{
+    margin:0;
+    padding:0;
+  }
+  img{
+    width:100%;
+  }
+  #qrcode{
+    position: absolute;
+    bottom:300px;
+    left:30%;
+    text-align: center;
+  }
+  </style>
+  </head>
+  <body>
+<div style="position: relative;">
+  <img id="srcImg" style="" />
+  <div id="qrcode"></div>
+  <canvas id="myCanvas"  width="200px" height="100px">
+    Your browser does not support the canvas element.
+  </canvas>
+</div>
+<!--main end-->
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="jquery.qrcode.min.js"></script>
+    <script>
+    jQuery(function(){
+    var whradio = 450/800;
+    var b = 378/667;
+    var width = $("body").width();
+    var height = width/whradio;
+    var qrcodeWidth = width * 0.4;
+    var axesX = width * 0.3;
+    var axesY =  b * height;
+    jQuery('#qrcode').qrcode({
+    width: qrcodeWidth,
+    height:qrcodeWidth,
+    text: "http://www.jq22.com"
+    }).hide();
+
+    
+
+    var qrcodeImg = document.getElementById('qrcode').lastChild;
+    var qrcodePic=convertCanvasToImage(qrcodeImg);
+
+    var bgimg = new Image();
+    bgimg.src = '1.png';
+
+    var canvas = document.getElementById('myCanvas');
+    canvas.width = width;
+    canvas.height = height;
+    var ctx = canvas.getContext('2d');
+
+    bgimg.crossOrigin = "*";
+    bgimg.onload = function(){
+      ctx.drawImage(bgimg,0,0,width,height);
+      ctx.drawImage(qrcodePic,axesX,axesY,qrcodeImg.width,qrcodeImg.width);
+      var srcImg = canvas.toDataURL('image/png');
+      $("#myCanvas").hide();
+      document.getElementById('srcImg').setAttribute('src',srcImg);
+    }
+
+    function convertCanvasToImage(canvas) {
+    //新Image对象，可以理解为DOM
+    var image = new Image();
+    // canvas.toDataURL 返回的是一串Base64编码的URL，当然,浏览器自己肯定支持
+    // 指定格式 PNG
+    image.src = canvas.toDataURL("image/png");
+    return image;
+    }
+});
+</script>
+  </body>
+</html>

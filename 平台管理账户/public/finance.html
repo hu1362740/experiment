@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>平台管理系统</title>
+    <link href="css/base/base.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="finance-tab">
+            <ul>
+                <li class="active">账户信息</li>
+                <li>入账</li>
+                <li>支出</li>
+            </ul>
+            <div class="blue_block-zone">
+                <div class="finance_block" style="left: 0%;"></div>
+            </div>
+        </div>
+        <div class="tab-table finance-table" style="border: none">
+            <div class="agent active">
+                <div class="content1"> 
+                	<div>账户总余额：1000000元</div>
+                    <div>账户总收入：2000000元</div>
+                    <div>账户总支出：1000000元</div>
+                </div>
+                <div class="content2">
+                	账户余额变动信息
+                </div>
+                <div class="content3">
+                	<div class="child-tab">
+					    <ul>
+					        <li class="active">本日</li>
+					        <li>本周</li>
+					        <li>本月</li>
+					        <li>历史</li>
+					    </ul>
+					    <div class="child_blue_block-zone">
+					        <div class="child_blue_block" style="left: 0%;"></div>
+					    </div>
+                    </div>
+                    <div class="child-tab-table">
+                    	<div class="active">
+                    		<h5>2018年1月1日，账户总余额：</h5>
+                    		<p><span>1000000</span>元</p>
+                            <div style="height: 8px;background: #efeff4"></div>
+                            <div class="account-day-box">
+                                <div class="account-day-box-cash">
+                                    <span>提现</span>
+                                    <input type="number" name="" />
+                                    <span>确认</span>
+                                </div>
+                                <div style="font-size:12px;padding-top:8px;padding-bottom:8px;">
+                                    注：提现金额必须是100的整数倍！
+                                </div>
+                                <div>
+                                    您的提现正在审核中……
+                                </div>
+                            </div>
+                    	</div>
+                    	<div class="week">
+                    		<div id="finance-chart1" style="width:100%;height:400px"></div>
+                            <div class="toggle-box">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                    	</div>
+                    	<div class="month">
+                    		<div id="finance-chart2" style="width:100%;height:400px"></div>
+                    	    <div class="toggle-box">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    	<div class="year">
+                    		<div id="finance-chart3" style="width:100%;height:400px"></div>
+                    	    <div class="toggle-box">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="agent">
+                <div class="content1"> 
+                    <div>账户总收入：2000000元</div>
+                </div>
+                <div class="content2">
+                    账户入账信息
+                </div>
+                <div class="content3">
+                    <div class="child-tab">
+                        <ul>
+                            <li class="active">本日</li>
+                            <li>本周</li>
+                            <li>本月</li>
+                            <li>历史</li>
+                        </ul>
+                        <div class="child_blue_block-zone">
+                            <div class="child_blue_block" style="left: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="child-tab-table">
+                        <div class="active">
+                            <h5>2018年1月1日，账户总收入：</h5>
+                            <p><span>2000000</span>元</p>
+                            <div style="height: 8px;background: #efeff4"></div>
+                            <div class="toggle-box" style="padding-bottom: 0;">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="week">
+                            <div id="finance-chart4" style="width:100%;height:400px"></div>
+                            <div class="toggle-box">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="month">
+                            <div id="finance-chart5" style="width:100%;height:400px"></div>
+                            <div class="toggle-box">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="year">
+                            <div id="finance-chart6" style="width:100%;height:400px"></div>
+                            <div class="toggle-box">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="agent">
+                <div class="content1"> 
+                    <div>账户总支出：1000000元</div>
+                </div>
+                <div class="content2">
+                    账户支出信息
+                </div>
+                <div class="content3">
+                    <div class="child-tab">
+                        <ul>
+                            <li class="active">本日</li>
+                            <li>本周</li>
+                            <li>本月</li>
+                            <li>历史</li>
+                        </ul>
+                        <div class="child_blue_block-zone">
+                            <div class="child_blue_block" style="left: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="child-tab-table">
+                        <div class="active">
+                            <h5>2018年1月1日，账户总支出：</h5>
+                            <p><span>1000000</span>元</p>
+                            <div style="height: 8px;background: #efeff4"></div>
+                            <div class="toggle-box" style="padding-bottom: 0;">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="week">
+                            <div id="finance-chart7" style="width:100%;height:400px"></div>
+                            <div class="toggle-box">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="month">
+                            <div id="finance-chart8" style="width:100%;height:400px"></div>
+                            <div class="toggle-box">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="year">
+                            <div id="finance-chart9" style="width:100%;height:400px"></div>
+                            <div class="toggle-box">
+                                <h5 class="toggle-box-title">详细信息<i class="iconfont down" style="display: block;"></i><i class="iconfont up" style="display: none;"></i></h5>
+                                <div class="toggle-box-container" style="display: none;">
+                                    <table class="normal-table">
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>账户</td>
+                                            <td>金额</td>
+                                            <td>性质</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018.9.9</td>
+                                            <td>efeww</td>
+                                            <td>100</td>
+                                            <td>代理采购</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main end-->
+    <!--foot begin-->
+    <div class="foot">
+        <div class="active">
+            <a href="market.html">
+                <div><i class="iconfont">&#xe737;</i></div>
+                <div>市场</div>
+            </a>
+        </div>
+        <div>
+            <a href="charge.html">
+                <div><i class="iconfont">&#xf029c;</i></div>
+                <div>充值</div>
+            </a>
+        </div>
+        <div>
+            <a href="finance.html">
+                <div><i class="iconfont">&#xe74a;</i></div>
+                <div>财务</div>
+            </a>
+        </div>
+        <div>
+            <a href="operate.html">
+                <div><i class="iconfont">&#xe697;</i></div>
+                <div>运营</div>
+            </a>
+        </div>
+    </div>
+    <!--foot end-->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/layer.js"></script>
+    <script src="js/highcharts.js"></script>
+</body>
+
+</html>

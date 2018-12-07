@@ -473,7 +473,7 @@
      }
      /*record*/
 
-     .main .tab ul {
+     .main .tab ul,.main .child-tab ul {
          list-style: none;
          display: -moz-box;
          /* Firefox */
@@ -486,7 +486,7 @@
          background: #fff;
      }
 
-     .main .tab ul li {
+     .main .tab ul li,.main .child-tab ul li {
          -moz-box-flex: 1.0;
          /* Firefox */
          -webkit-box-flex: 1.0;
@@ -498,14 +498,21 @@
          color: #65646b;
          height: 45px;
          line-height: 45px;
-         cursor: pointer;
      }
 
-     .blue_block-zone {
+     .child_blue_block-zone,.blue_block-zone {
          position: relative;
      }
 
      .blue_block {
+         width: 50%;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         height: 2px;
+         background-color: #ff711c;
+     }
+     .child_blue_block{
          width: 25%;
          position: absolute;
          left: 0;
@@ -544,41 +551,113 @@
          padding: 3px 0px;
      }
 
-     .tab-table>div {
+     .tab-table>div,.child-tab-table>div {
          display: none;
      }
 
-     .tab-table>div.active {
+     .tab-table>div.active,.child-tab-table>div.active {
          display: block;
      }
 
      .tab-table .table tr:first-child td {
          border: none;
      }
-
+     .child-tab-table{
+        color: #848484;
+        text-align: center;
+     }
+     .child-tab-table h5{
+        margin-top: 15px;
+     }
+     .child-tab-table p{
+        font-size:16px;
+     }
+     .child-tab-table p span{
+        font-size:42px;
+        color: red;
+        padding-right: 10px;
+     }
      .tab-table .table tr.even td {
          border: none;
          padding-top: 0px;
      }
      /*proxy.html*/
 
-     .personal-info table {
+     .agent table {
          width: 100%;
      }
 
-     .personal-info>div {
+     .agent>div {
          /*border: 1px solid #b9bbbf;*/
          margin-top: 10px;
          background: #fff;
          padding: 10px 10px;
      }
-
-     .personal-info table td {
+     .agent>div.content2{
+        background: #efeff4;
+        margin-top:0;
+        text-align: center;
+     }
+     .agent table td {
          padding: 3px 0px;
          font-size: 14px;
          color: #848484;
      }
-
+     .agent .box-containter{
+         display: -moz-box;
+         /* Firefox */
+         display: -webkit-box;
+         /* Safari and Chrome */
+         display: box;
+     }
+     .agent .box-containter>div{
+        -moz-box-flex: 1.0;
+         /* Firefox */
+         -webkit-box-flex: 1.0;
+         /* Safari and Chrome */
+         box-flex: 1.0;
+         text-align: center;
+         box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
+     }
+     .agent .box-containter>div.amount{
+        border-bottom: 1px solid #666;
+     }
+     .agent .content3{
+        margin-top: 0;
+     }
+          .player>div {
+         margin-top: 10px;
+         background: #fff;
+         padding: 10px 10px;
+     }
+          .player .content1{
+         display: -moz-box;
+         /* Firefox */
+         display: -webkit-box;
+         /* Safari and Chrome */
+         display: box;
+     }
+     .player .content1>div{
+        -moz-box-flex: 1.0;
+         /* Firefox */
+         -webkit-box-flex: 1.0;
+         /* Safari and Chrome */
+         box-flex: 1.0;
+         text-align: center;
+     }
+     .player .content1>div.amount{
+        border-bottom: 1px solid #666;
+     }
+      .player>div.content2{
+        background: #efeff4;
+        margin-top:0;
+        text-align: center;
+     }
+     .player .content3{
+        margin-top: 0;
+     }
      .password-box h5 {
          text-align: center;
          padding: 8px 0;

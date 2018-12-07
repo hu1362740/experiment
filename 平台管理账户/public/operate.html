@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>平台管理系统</title>
+<!--     <link rel="stylesheet" href="css/base/LCalendar.css"> -->
+    <link href="css/base/base.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="finance-tab">
+            <ul>
+                <li class="active">实时数据</li>
+                <li>玩家消耗</li>
+                <li>代理消耗</li>
+            </ul>
+            <div class="blue_block-zone">
+                <div class="finance_block" style="left: 0%;"></div>
+            </div>
+        </div>
+        <div class="tab-table finance-table" style="border: none">
+            <div class="agent active">
+               <!--  <div class="content1"> 
+                	<div>实时在线人数：500人</div>
+                </div> -->
+                <div class="content2">
+                	<div class="fl box-line">实时在线人数：500人</div>
+                    <div class="fr box-line"><button type="button" class="custom-primary" id="query1" style="padding: 6px 12px">查询</button></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="content3">
+                	<div class="child-tab">
+					    <ul>
+					        <li class="active">本日</li>
+					        <li>本周</li>
+					        <li>本月</li>
+					        <li>历史</li>
+					    </ul>
+					    <div class="child_blue_block-zone">
+					        <div class="child_blue_block" style="left: 0%;"></div>
+					    </div>
+                    </div>
+                    <div class="child-tab-table">
+                    	<div class="active">
+                            <div id="operate-chart1" style="width:100%;height:400px"></div>
+                            <div>
+                                <div class="box-line">日期：<input type="date" class="custom-date" name=""/>至<input type="date" class="custom-date" name=""/></div>
+                                <div class="box-line" style="margin-top:5px">
+                                    <button type="button" class="custom-primary" id="query2" style="padding: 6px 12px;width: 50px;box-sizing: border-box;">查询</button>
+                                </div>
+                                <div id="operate-chart5" style="width:100%;height:400px"></div>
+                            </div>
+                        </div>
+                    	<div class="week">
+                    		<div id="operate-chart2" style="width:100%;height:400px"></div>
+                    	</div>
+                    	<div class="month">
+                    		<div id="operate-chart3" style="width:100%;height:400px"></div>
+                        </div>
+                    	<div class="year">
+                    		<div id="operate-chart4" style="width:100%;height:400px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="agent">
+                <div class="content1" style="color: #191919;"> 
+                    <div class="fl box-line" style="padding: 0">玩家总消耗萝卜：1000000颗</div>
+                    <div class="fr box-line" style="padding: 0"><button type="button" class="custom-primary" id="query3" style="padding: 6px 12px">查询</button></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="content2">
+                    玩家消耗信息
+                </div>
+                <div class="content3">
+                    <div class="child-tab">
+                        <ul>
+                            <li class="active">本日</li>
+                            <li>本周</li>
+                            <li>本月</li>
+                            <li>历史</li>
+                        </ul>
+                        <div class="child_blue_block-zone">
+                            <div class="child_blue_block" style="left: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="child-tab-table">
+                        <div class="active">
+                            <h5>2018年1月1日，玩家总消耗：</h5>
+                            <p><span>1000000</span>颗</p>
+                        </div>
+                        <div class="week">
+                            <div id="operate-chart6" style="width:100%;height:400px"></div>
+                        </div>
+                        <div class="month">
+                            <div id="operate-chart7" style="width:100%;height:400px"></div>
+                        </div>
+                        <div class="year">
+                            <div id="operate-chart8" style="width:100%;height:400px"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content4">
+                    <div>
+                        <div class="fl box-line" style="padding: 0">玩家ID：
+                            <input type="text" name="" class="userId" />
+                        </div>
+                        <div class="fr box-line">
+                            <button type="button" class="custom-primary" id="query1" style="padding: 6px 12px">查询</button>
+                        </div>
+                        <div class="clear"></div>
+                        <div style="padding-top:10px;text-align: center;">
+                            <table class="normal-table">
+                                <tr>
+                                    <td>消耗时间</td>
+                                    <td>玩家昵称</td>
+                                    <td>消耗数量</td>
+                                </tr>
+                                <tr>
+                                    <td>3h</td>
+                                    <td>ala</td>
+                                    <td>20颗</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="agent">
+                <div class="content1" style="color: #191919;"> 
+                    <div class="fl box-line" style="padding: 0">代理总消耗萝卜：1000000颗</div>
+                    <div class="fr box-line" style="padding: 0"><button type="button" class="custom-primary" id="query4" style="padding: 6px 12px">查询</button></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="content2">
+                    代理消耗信息
+                </div>
+                <div class="content3">
+                    <div class="child-tab">
+                        <ul>
+                            <li class="active">本日</li>
+                            <li>本周</li>
+                            <li>本月</li>
+                            <li>历史</li>
+                        </ul>
+                        <div class="child_blue_block-zone">
+                            <div class="child_blue_block" style="left: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="child-tab-table">
+                        <div class="active">
+                            <h5>2018年1月1日，代理总消耗：</h5>
+                            <p><span>1000000</span>颗</p>
+                        </div>
+                        <div class="week">
+                            <div id="operate-chart9" style="width:100%;height:400px"></div>
+                        </div>
+                        <div class="month">
+                            <div id="operate-chart10" style="width:100%;height:400px"></div>
+                        </div>
+                        <div class="year">
+                            <div id="operate-chart11" style="width:100%;height:400px"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content4">
+                    <div>
+                        <div class="fl box-line" style="padding: 0">代理账号：
+                            <input type="text" name="" class="userId" />
+                        </div>
+                        <div class="fr box-line">
+                            <button type="button" class="custom-primary" id="query1" style="padding: 6px 12px">查询</button>
+                        </div>
+                        <div class="clear"></div>
+                        <div style="padding-top:10px;text-align: center;">
+                            <table class="normal-table">
+                                <tr>
+                                    <td>消耗时间</td>
+                                    <td>代理昵称</td>
+                                    <td>消耗数量</td>
+                                </tr>
+                                <tr>
+                                    <td>3h</td>
+                                    <td>ala</td>
+                                    <td>20颗</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main end-->
+    <!--foot begin-->
+    <div class="foot">
+        <div class="active">
+            <a href="market.html">
+                <div><i class="iconfont">&#xe737;</i></div>
+                <div>市场</div>
+            </a>
+        </div>
+        <div>
+            <a href="charge.html">
+                <div><i class="iconfont">&#xf029c;</i></div>
+                <div>充值</div>
+            </a>
+        </div>
+        <div>
+            <a href="finance.html">
+                <div><i class="iconfont">&#xe74a;</i></div>
+                <div>财务</div>
+            </a>
+        </div>
+        <div>
+            <a href="operate.html">
+                <div><i class="iconfont">&#xe697;</i></div>
+                <div>运营</div>
+            </a>
+        </div>
+    </div>
+    <!--foot end-->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/layer.js"></script>
+    <script src="js/highcharts.js"></script>
+<!--     <script src="js/LCalendar.js"></script> -->
+</body>
+
+</html>
